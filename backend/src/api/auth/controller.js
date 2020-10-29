@@ -1,3 +1,4 @@
+const log = require('../../log');
 const { loadModel, Op, paginator } = require(__dirname + '/../../models');
 const { getHash, checkHash, getToken } = require(__dirname + '/../../auth');
 const User = loadModel('User');
@@ -21,6 +22,7 @@ module.exports.me = async function(req) {
 
 module.exports.login = async function(req) {
     try {
+        log.logger.info(req.body);
         const { email, password } = req.body;
         let user = await User.findOne({ where: { email } });
         if (user === null) {
@@ -37,6 +39,7 @@ module.exports.login = async function(req) {
             }
         }
     } catch (error) {
+        log.logger.info(error);
         req.error({ error });
     }
 };

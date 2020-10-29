@@ -11,7 +11,7 @@ const config = {
     store: {
         options: {
             host: env.DB_HOST,
-            dialect: "mysql",
+            dialect: "mariadb",
             username: env.DB_USER,
             port: env.DB_PORT,
             password: env.DB_PASSWORD,

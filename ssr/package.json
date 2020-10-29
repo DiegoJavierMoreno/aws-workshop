@@ -30,7 +30,7 @@
     "@nuxtjs/vuetify": "latest",
     "nodemon": "^1.18.9",
     "nuxt": "latest",
-    "sass-loader": "latest",
+    "sass-loader": "^7.1.0",
     "serverless-plugin-cloudfront-lambda-edge": "^2.1.0",
     "serverless-scriptable-plugin": "^1.0.5",
     "webpack": "^4.42.1"
